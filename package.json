@@ -1,0 +1,23 @@
+{
+  "name": "discord-color-roles",
+  "version": "1.0.0",
+  "description": "A bot that allows color roles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "color",
+    "roles"
+  ],
+  "author": "haykam821",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
