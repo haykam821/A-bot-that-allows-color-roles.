@@ -22,10 +22,10 @@ client.on("ready", () => {
 				color: role.color,
 			},
 		});
-		await msg.react("✅");
+		await msg.react(config.reaction);
 
 		const collector = msg.createReactionCollector((reaction, user) => {
-			return reaction.emoji.name === "✅" && user.id !== client.user.id;
+			return reaction.emoji.name === config.reaction && user.id !== client.user.id;
 		});
 		collector.on("collect", async reaction => {
 			reaction.message.clearReactions();
@@ -33,7 +33,7 @@ client.on("ready", () => {
 			const reactors = reaction.users.array().filter(reactor => reactor.id !== client.user.id);
 			updateMemberRoles(reactors, guild, reaction.message, cRoles);
 
-			reaction.message.react("✅");
+			reaction.message.react(config.reaction);
 		});
 	});
 });
