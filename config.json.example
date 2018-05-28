@@ -6,5 +6,6 @@
         "another role ID",
         "role name"
     ],
-    "reaction": "an emoji"
+    "reaction": "an emoji",
+    "tutorial": true
 }

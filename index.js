@@ -6,12 +6,19 @@ client.login(config.token);
 
 const forEach = require("await-each");
 
-client.on("ready", () => {
+client.on("ready", async () => {
 	const channel = client.channels.get(config.channel);
 	const guild = channel.guild;
 	const allRoles = guild.roles;
 
 	const cRoles = cleanRoles(config.roles, allRoles).filter(cRole => cRole);
+
+	if (config.tutorial) {
+		await channel.send([
+			"Click a reaction below each color role to get it.",
+			"If you want to remove your color role, click the reaction below the color you already have.",
+		].join("\n"));
+	}
 
 	forEach(cRoles, async role => {
 		if (!role) return;
