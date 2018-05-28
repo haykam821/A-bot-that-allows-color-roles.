@@ -1,4 +1,9 @@
 {
-    "token": "",
-    "channel": ""
+    "token": "your bot's token",
+    "channel": "main channel ID",
+    "roles": [
+        "role ID",
+        "another role ID",
+        "role name"
+    ]
 }
